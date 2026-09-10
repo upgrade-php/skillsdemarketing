@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skillsdemarketing.com.br/schemas/catalog-export.schema.json",
+  "title": "Catalog Export (catalog.json)",
+  "description": "Contrato consumido pelo site skillsdemarketing.com.br (User Story 3, FR-015). Gerado por scripts/generate-catalog.mjs; nunca editado manualmente.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["name", "category", "description"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+        "description": "Chave técnica da skill, idêntica ao campo `name` do frontmatter (kebab-case, inglês)."
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "SEO e Conteúdo",
+          "CRO",
+          "Conteúdo e Copy",
+          "Pago e Mensuração",
+          "Crescimento e Retenção",
+          "Vendas e GTM",
+          "Estratégia"
+        ],
+        "description": "Uma das 7 categorias traduzidas do mapeamento em scripts/categories.json (ver data-model.md)."
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200,
+        "description": "Descrição curta em pt-BR para exibição no catálogo navegável do site — não é o texto completo do gatilho de invocação da skill."
+      }
+    }
+  }
+}
