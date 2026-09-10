@@ -1,3 +1,7 @@
+# Running `pre-commit install` alone (the documented setup step) installs
+# both hook types below, so contributors get commit-msg linting for free.
+default_install_hook_types: [pre-commit, commit-msg]
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -18,3 +22,23 @@ repos:
     hooks:
       - id: markdownlint
         args: [--config, .markdownlint.yaml]
+
+  # Enforces Conventional Commits (https://www.conventionalcommits.org) on the
+  # commit message itself — runs at the commit-msg stage, not pre-commit.
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v4.4.0
+    hooks:
+      - id: conventional-pre-commit
+        stages: [commit-msg]
+        args:
+          - feat
+          - fix
+          - build
+          - chore
+          - ci
+          - docs
+          - style
+          - refactor
+          - perf
+          - test
+          - revert
