@@ -1,5 +1,25 @@
 # Contribuindo
 
+## Fluxo de branches e Pull Request
+
+A `main` é protegida: mudanças só entram via Pull Request (push direto é
+bloqueado pela ruleset do repositório).
+
+1. Crie uma branch a partir da `main`. Sem convenção rígida de prefixo por
+   enquanto — use algo descritivo, ex.: `feat/adapta-skill-cro`,
+   `docs/glossario`, `ci/ajusta-workflow`.
+2. Commit(s) na branch seguindo [Conventional Commits](#mensagens-de-commit).
+3. Abra o PR (`gh pr create` ou pela interface do GitHub). O CI roda
+   automaticamente:
+   - **CI** (`pre-commit`) — hygiene checks + markdownlint.
+   - **CodeQL** — análise estática de código (relevante quando o fork
+     incorporar `tools/*` e `scripts/*.mjs` do repositório original).
+4. Com os dois checks verdes, faça o merge. Não há exigência de aprovação
+   formal de um segundo revisor configurada na ruleset hoje — reflete o
+   Princípio IV da [constituição](.specify/memory/constitution.md)
+   (revisor único, v1). Isso é reavaliado se/quando houver um segundo
+   colaborador com acesso ao repo.
+
 ## Mensagens de commit
 
 Este repositório segue [Conventional Commits](https://www.conventionalcommits.org/).
