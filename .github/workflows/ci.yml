@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pre-commit:
+    name: pre-commit (hygiene + markdownlint)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # Same hooks/config as .pre-commit-config.yaml, run against every file
+      # so CI catches what a contributor's local hook may have skipped
+      # (e.g. a commit made with --no-verify, or hooks never installed).
+      - uses: pre-commit/action@v3.0.1
