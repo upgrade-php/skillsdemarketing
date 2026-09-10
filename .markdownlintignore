@@ -3,3 +3,16 @@
 .claude/skills/
 .specify/templates/
 .specify/workflows/
+
+# Herdado do upstream (coreyhaines31/marketingskills) sem tradução nesta
+# feature — apenas skills/*/SKILL.md é adaptado ao pt-BR (research.md §
+# Escopo de adaptação). references/*.md e tools/ ficam em inglês, no estado
+# em que foram importados; não corrigimos lint neles para não divergir do
+# upstream e dificultar o /speckit... de sincronização futura.
+skills/*/references/
+tools/
+
+# VERSIONS.md é majoritariamente o changelog original do upstream (em
+# inglês, preservado por atribuição — ver Princípio III da constituição);
+# só a seção "Changelog do fork pt-BR" no topo é conteúdo novo deste fork.
+VERSIONS.md
