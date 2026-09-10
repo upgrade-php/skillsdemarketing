@@ -1,0 +1,25 @@
+# Relaxed ruleset for a content-heavy pt-BR repo (long-form PRDs, docs, and
+# eventually adapted SKILL.md files). See https://github.com/DavidAnson/markdownlint
+# for rule docs.
+
+default: true
+
+# Long prose lines (PRD paragraphs, table cells) are expected — don't fight wrapping.
+MD013: false
+
+# Skill/doc frontmatter and headings sometimes repeat titles across sections
+# (e.g. multiple "Aberto" / "Rationale" subheadings) — allow duplicates as long
+# as they aren't siblings under the same parent.
+MD024:
+  siblings_only: true
+
+# Inline HTML (e.g. <details>, line breaks) is used deliberately in some docs.
+MD033: false
+
+# First line of a file doesn't have to be a top-level heading (e.g. files that
+# start with a Sync Impact Report HTML comment, like the constitution).
+MD041: false
+
+# Short bold captions above a code sample or under a title (e.g. "**Rascunho
+# para aprovação**") are intentional labels, not headings we forgot to write.
+MD036: false

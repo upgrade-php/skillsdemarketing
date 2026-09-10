@@ -6,8 +6,8 @@ Fork do catálogo de agent skills de marketing ([coreyhaines31/marketingskills](
 
 | | |
 |---|---|
-| **Repositório original** | https://github.com/coreyhaines31/marketingskills |
-| **Fork pt-BR** | https://github.com/upgrade-php/skillsdemarketing |
+| **Repositório original** | <https://github.com/coreyhaines31/marketingskills> |
+| **Fork pt-BR** | <https://github.com/upgrade-php/skillsdemarketing> |
 | **Licença** | MIT |
 | **Escopo v1** | 50 skills + docs do repo |
 | **Data** | 10 set 2026 |
@@ -48,16 +48,19 @@ Toda a documentação, os exemplos e os gatilhos de invocação estão em inglê
 ## 4. Histórias de usuário
 
 ### Mantenedor(a) do fork
+
 - Como mantenedor(a), quero um **remote upstream** configurado e um processo de diff documentado, para identificar rapidamente o que mudou no original desde a última sincronização.
 - Como mantenedor(a), quero um **glossário de termos** (CRO, ICP, funil, ativação...) para manter consistência entre as 50 skills.
 - Como mantenedor(a), quero que o **frontmatter YAML** continue sendo lido corretamente pelos agentes após a adaptação, para não quebrar a instalação.
 
 ### Profissional de marketing BR
+
 - Como usuário de Claude Code, quero instalar as skills em português com o **mesmo comando** (`npx skills add`) apontando para o fork, sem fricção adicional.
 - Como redator(a)/growth, quero que os **gatilhos de invocação** estejam em português natural, para a skill ser acionada nas minhas próprias palavras.
 - Como usuário que não domina inglês técnico, quero exemplos e explicações em **português claro**, sem tradução literal, para confiar nas recomendações.
 
 ### Marca skillsdemarketing.com.br
+
 - Como responsável pelo site, quero cada skill com **metadados estruturados** (categoria, nome, descrição curta) para popular um catálogo navegável.
 - Como responsável pela marca, quero uma **nota de atribuição clara** ao projeto original — autor, licença MIT, link — para dar crédito correto.
 
@@ -66,6 +69,7 @@ Toda a documentação, os exemplos e os gatilhos de invocação estão em inglê
 Trecho real da skill `cro` hoje no repositório original, e como o frontmatter e o corpo devem ficar após a adaptação — preservando a chave técnica `name` e a estrutura YAML.
 
 **Original (en) — `skills/cro/SKILL.md`**
+
 ```yaml
 name: cro
 description: "When the user wants to optimize, improve, or increase
@@ -81,6 +85,7 @@ Before providing recommendations, identify:
 ```
 
 **Adaptado (pt-BR)**
+
 ```yaml
 name: cro
 description: "Quando o usuário quiser otimizar, melhorar ou
@@ -101,12 +106,14 @@ Antes de fazer recomendações, identifique:
 
 **R1 — Fork configurado**
 Fork do repositório criado no GitHub, com remote upstream.
+
 - [ ] Fork público existe em `github.com/upgrade-php/skillsdemarketing`
 - [ ] `git remote -v` mostra origin (fork) e upstream (original)
 - [ ] README do fork identifica claramente que é uma tradução/adaptação não-oficial, com link e crédito ao repositório original e licença MIT preservada
 
 **R2 — Catálogo adaptado**
 As 50 pastas de skills têm seu `SKILL.md` integralmente adaptado ao contexto brasileiro.
+
 - [ ] 50/50 arquivos `SKILL.md` adaptados (frontmatter, corpo, exemplos, gatilhos)
 - [ ] Chave `name` mantida em inglês/kebab-case por compatibilidade
 - [ ] `description` e corpo 100% em pt-BR natural, sem tradução literal
@@ -115,11 +122,13 @@ As 50 pastas de skills têm seu `SKILL.md` integralmente adaptado ao contexto br
 
 **R3 — Compatibilidade técnica**
 Estrutura YAML e de pastas preservada sem quebrar instalação.
+
 - [ ] `npx skills add <fork>` instala sem erros
 - [ ] `/plugin marketplace add` reconhece o `.claude-plugin/` do fork
 
 **R4 — Documentação do repositório**
 README, CLAUDE.md, AGENTS.md e CONTRIBUTING.md traduzidos.
+
 - [ ] Cada documento traduzido e revisado
 - [ ] Seção de instalação testada e funcional em pt-BR
 - [ ] Link para o repositório original visível no topo do README
@@ -139,6 +148,7 @@ README, CLAUDE.md, AGENTS.md e CONTRIBUTING.md traduzidos.
 ## 7. Métricas de sucesso
 
 ### Indicadores de lançamento
+
 | Métrica | Meta |
 |---|---|
 | Skills adaptadas no lançamento | 50 / 50 |
@@ -146,6 +156,7 @@ README, CLAUDE.md, AGENTS.md e CONTRIBUTING.md traduzidos.
 | Frontmatter validado (script do repo) | 50 / 50 |
 
 ### Indicadores de médio prazo
+
 | Métrica | Meta |
 |---|---|
 | Defasagem média vs. upstream | ≤ 14 dias |
@@ -159,6 +170,7 @@ README, CLAUDE.md, AGENTS.md e CONTRIBUTING.md traduzidos.
 - **Revisão** — revisor único: você (vpp.filho) aprova a qualidade de cada skill adaptada antes do merge, sem dupla checagem na v1. *(decidido em 10 set 2026)*
 
 ### Aberto
+
 - Vale automatizar parte da tradução (R8) já na v1, ou tudo é revisão manual no primeiro ciclo? *(responsável: engenharia, não bloqueia o lançamento)*
 
 ## 9. Fases sugeridas
