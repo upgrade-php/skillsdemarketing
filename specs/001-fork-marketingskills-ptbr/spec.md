@@ -8,6 +8,15 @@
 
 **Input**: User description: "leia o arquivo @prd-marketingskills-ptbr.md e crie as especificaçãoes"
 
+## Clarifications
+
+### Session 2026-09-10
+
+- Q: Quando o mantenedor precisa identificar o que mudou no repositório original desde a última sincronização, isso deve ser um script automatizado que gera esse diff, ou um checklist documentado que o mantenedor segue manualmente? → A: Script automatizado que gera o diff das skills alteradas no upstream.
+- Q: O export estruturado do catálogo deve ser um arquivo versionado no repositório gerado por script, ou algo gerado sob demanda por uma ferramenta que o site roda separadamente, sem nada commitado no fork? → A: Script que gera o export e o resultado também fica versionado no repositório a cada atualização.
+- Q: A validação de frontmatter das skills adaptadas deve rodar automaticamente no CI a cada Pull Request, bloqueando o merge se falhar, ou é um passo manual que o mantenedor roda localmente antes de aprovar? → A: Automático — novo status check obrigatório no CI, mesmo padrão do `pre-commit` atual.
+- Q: A "categoria" de cada skill usada no catálogo deve vir da categorização já existente no repositório original, ou o fork precisa definir uma taxonomia própria em português? → A: Reaproveitar a categorização existente no original, só traduzindo os nomes.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Instalar e usar o catálogo adaptado em pt-BR (Priority: P1)
@@ -66,8 +75,8 @@ resolve os termos já usados nas skills adaptadas.
 1. **Given** o repositório do fork, **When** o mantenedor roda `git remote -v`,
    **Then** tanto `origin` (fork) quanto `upstream` (original) aparecem configurados.
 2. **Given** uma atualização no repositório original, **When** o mantenedor executa o
-   processo de diff, **Then** a lista de skills alteradas desde a última sincronização
-   é identificada sem revisão manual arquivo por arquivo.
+   script de diff, **Then** a lista de skills alteradas desde a última sincronização é
+   identificada automaticamente, sem revisão manual arquivo por arquivo.
 3. **Given** o glossário de termos, **When** uma nova skill é adaptada, **Then** os
    termos usados (CRO, ICP, funil, ativação etc.) seguem a tradução já registrada.
 
@@ -89,11 +98,11 @@ cada skill publicada, sem depender do site existir.
 
 **Acceptance Scenarios**:
 
-1. **Given** o catálogo com skills adaptadas, **When** o export é gerado, **Then** o
-   resultado é um arquivo estruturado contendo nome, categoria e descrição curta em
-   pt-BR para cada skill publicada.
-2. **Given** uma skill recém-adaptada, **When** o export é regenerado, **Then** a nova
-   skill aparece no resultado sem exigir edição manual do arquivo de export.
+1. **Given** o catálogo com skills adaptadas, **When** o script de export é
+   executado, **Then** um arquivo estruturado versionado no repositório é gerado,
+   contendo nome, categoria e descrição curta em pt-BR para cada skill publicada.
+2. **Given** uma skill recém-adaptada, **When** o script de export é reexecutado,
+   **Then** a nova skill aparece no arquivo gerado sem exigir edição manual.
 
 ---
 
@@ -141,28 +150,34 @@ cada skill publicada, sem depender do site existir.
   patrocinadores).
 - **FR-011**: Cada skill adaptada MUST ser revisada e aprovada pelo mantenedor
   designado antes do merge (processo de revisor único na v1).
-- **FR-012**: O frontmatter de cada `SKILL.md` adaptado MUST passar na validação
-  automática de frontmatter do repositório antes do merge.
+- **FR-012**: O frontmatter de cada `SKILL.md` adaptado MUST ser validado
+  automaticamente por um status check obrigatório no CI a cada Pull Request,
+  bloqueando o merge caso a validação falhe.
 - **FR-013**: Um glossário de termos de marketing (pt-BR ↔ en) SHOULD ser mantido e
   consultado durante a adaptação, para garantir consistência terminológica entre as
   skills.
-- **FR-014**: MUST existir um processo documentado (checklist ou script) que
-  identifique quais skills mudaram no upstream desde a última sincronização.
-- **FR-015**: O fork MUST disponibilizar um export estruturado (nome, categoria,
-  descrição curta em pt-BR) do catálogo, apto a ser consumido por um site externo.
+- **FR-014**: MUST existir um script automatizado que identifique quais skills
+  mudaram no upstream desde a última sincronização, gerando a lista de skills
+  afetadas sem exigir revisão manual arquivo por arquivo.
+- **FR-015**: MUST existir um script que gera um export estruturado (nome, categoria,
+  descrição curta em pt-BR) do catálogo; o arquivo gerado MUST ficar versionado no
+  repositório e atualizado a cada mudança no catálogo, apto a ser consumido
+  diretamente por um site externo sem executar nenhuma ferramenta do fork.
 
 ### Key Entities
 
 - **Skill**: unidade do catálogo (`SKILL.md`). Atributos: chave técnica `name`
-  (kebab-case, preservada em inglês), `description` (pt-BR natural), categoria, corpo
-  de instruções, exemplos e gatilhos de invocação em pt-BR, status de adaptação
-  (pendente/adaptada/revisada).
+  (kebab-case, preservada em inglês), `description` (pt-BR natural), categoria
+  (herdada da categorização já existente no repositório original, com o nome
+  traduzido para pt-BR — sem nova taxonomia), corpo de instruções, exemplos e
+  gatilhos de invocação em pt-BR, status de adaptação (pendente/adaptada/revisada).
 - **Entrada de glossário**: termo em inglês, tradução padronizada em pt-BR, notas de
   uso — referenciada durante a adaptação de qualquer skill.
 - **Registro de sincronização**: referência à skill/commit do upstream, data em que a
   mudança foi detectada, status (pendente de adaptação / já sincronizada).
 - **Entrada de export do catálogo**: nome da skill, categoria, descrição curta em
-  pt-BR — consumida pelo site skillsdemarketing.com.br.
+  pt-BR — gerada por script e mantida versionada no repositório, consumida
+  diretamente pelo site skillsdemarketing.com.br.
 
 ## Success Criteria *(mandatory)*
 
@@ -195,5 +210,6 @@ cada skill publicada, sem depender do site existir.
   consideração futura) fica fora do escopo desta especificação; todo o ciclo inicial
   é de revisão manual.
 - A infraestrutura de repositório já existente (GitHub, branch protegida exigindo PR,
-  CI de hygiene/markdownlint, hooks de pre-commit e Conventional Commits) é reutilizada
-  como está; esta feature não a modifica.
+  CI de hygiene/markdownlint, hooks de pre-commit e Conventional Commits) é
+  reutilizada como está; esta feature apenas acrescenta um novo status check
+  obrigatório de validação de frontmatter (FR-012) ao CI já existente.
