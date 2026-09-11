@@ -14,6 +14,7 @@ qualquer agente compatível com a [especificação Agent Skills](https://agentsk
 
 **Contribuições são bem-vindas!** Encontrou uma forma de melhorar uma skill
 adaptada ou uma inconsistência de tradução? [Abra um PR](CONTRIBUTING.md).
+Quer apoiar o mantenedor? [Contribua via Pix](PIX.md).
 
 Encontrou um problema ou tem uma dúvida? [Abra uma issue](https://github.com/upgrade-php/skillsdemarketing/issues).
 
@@ -225,6 +226,11 @@ para reportar? PRs e issues são bem-vindos!
 
 Veja [CONTRIBUTING.md](CONTRIBUTING.md) para as diretrizes de contribuição —
 tanto do fluxo de repositório quanto de como adaptar ou revisar uma skill.
+
+## Apoie este projeto
+
+Este fork é mantido de forma independente. Se as skills te ajudaram, você pode
+contribuir com um Pix — QR Code e chave copia e cola estão em [PIX.md](PIX.md).
 
 ## Sobre o mantenedor
 
