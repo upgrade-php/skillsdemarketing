@@ -3,6 +3,7 @@
 
 .specify/ export-ignore
 specs/ export-ignore
+prd-marketingskills-ptbr.md export-ignore
 
 .claude/skills/speckit-analyze/ export-ignore
 .claude/skills/speckit-checklist/ export-ignore
