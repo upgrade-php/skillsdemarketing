@@ -1,0 +1,12 @@
+{
+  "name": "marketing-skills-ptbr",
+  "description": "Skills de marketing para agentes de IA em pt-BR — otimização de conversão, copywriting, SEO, anúncios pagos, criativos e growth. Fork não-oficial de coreyhaines31/marketingskills (Corey Haines).",
+  "version": "2.11.1",
+  "author": {
+    "name": "vpp.filho (fork pt-BR; catálogo original por Corey Haines)"
+  },
+  "homepage": "https://github.com/upgrade-php/skillsdemarketing",
+  "repository": "https://github.com/upgrade-php/skillsdemarketing",
+  "license": "MIT",
+  "skills": "./skills"
+}

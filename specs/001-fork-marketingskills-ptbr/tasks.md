@@ -41,13 +41,13 @@ conforme `plan.md` § Project Structure.
 
 **Purpose**: Inicialização do ambiente antes de trazer qualquer conteúdo do upstream
 
-- [ ] T001 Configurar remote `upstream` apontando para
+- [X] T001 Configurar remote `upstream` apontando para
   `https://github.com/coreyhaines31/marketingskills.git` (FR-001)
-- [ ] T002 [P] Confirmar Node.js LTS (20+) disponível localmente e no runner de CI
+- [X] T002 [P] Confirmar Node.js LTS (20+) disponível localmente e no runner de CI
   para os scripts novos (research.md § Stack técnica)
-- [ ] T003 [P] Criar `scripts/categories.json` com um objeto JSON vazio `{}` como
+- [X] T003 [P] Criar `scripts/categories.json` com um objeto JSON vazio `{}` como
   esqueleto (data-model.md § Mapeamento de categorias)
-- [ ] T004 [P] Criar `GLOSSARY.md` com cabeçalho e tabela vazia (colunas: termo en,
+- [X] T004 [P] Criar `GLOSSARY.md` com cabeçalho e tabela vazia (colunas: termo en,
   tradução pt-BR, notas de uso) (data-model.md § Entrada de glossário, FR-013)
 
 ---
@@ -62,27 +62,27 @@ constituição "Fluxo de Trabalho de Adaptação"; ver Nota de revisão acima �
 
 **🚨 CRITICAL**: Nenhuma tarefa de user story pode começar até esta fase terminar
 
-- [ ] T005 Criar `.github/workflows/validate-skill.yml` reusando
+- [X] T005 Criar `.github/workflows/validate-skill.yml` reusando
   `Flash-Brew-Digital/validate-skill@v1`, com detecção de skills alteradas via
   `git diff` no PR (mesmo padrão do workflow `validate-skill.yml` do upstream)
   (FR-012, research.md § Mecanismo de validação)
-- [ ] T006 Adicionar o novo check de validação de frontmatter à lista
+- [X] T006 Adicionar o novo check de validação de frontmatter à lista
   `required_status_checks` da ruleset da `main` no GitHub, ao lado do
   `pre-commit (hygiene + markdownlint)` já obrigatório (FR-012, Clarifications
   2026-09-10) (depende de T005)
-- [ ] T007 Importar `skills/`, `tools/`, `scripts/sync-partners.mjs`,
+- [X] T007 Importar `skills/`, `tools/`, `scripts/sync-partners.mjs`,
   `.claude-plugin/marketplace.json`, `.claude-plugin/plugin.json`, `partners.json`,
   `README.md`, `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING.md`, `LICENSE`,
   `VERSIONS.md` de `upstream/main` para o fork, preservando a estrutura de pastas
   (bloqueia todas as user stories) (depende de T006 — gate de frontmatter já ativo
   antes de qualquer conteúdo de skill entrar no repositório)
-- [ ] T008 Registrar a SHA do `upstream/main` importada em `.specify/sync-state.json`
+- [X] T008 Registrar a SHA do `upstream/main` importada em `.specify/sync-state.json`
   (campos `last_synced_sha`, `last_synced_at`) (data-model.md § Registro de
   sincronização) (depende de T007)
-- [ ] T009 Reconciliar o `CONTRIBUTING.md` já existente no fork (fluxo de
+- [X] T009 Reconciliar o `CONTRIBUTING.md` já existente no fork (fluxo de
   branch/PR) com o `CONTRIBUTING.md` importado do upstream (guia de autoria de
   skill) em um único arquivo coerente (depende de T007)
-- [ ] T010 Remover/neutralizar `partners.json`, `tools/PARTNERS.md` e o bloco
+- [X] T010 Remover/neutralizar `partners.json`, `tools/PARTNERS.md` e o bloco
   `<!-- PARTNERS:START/END -->` do `README.md` importado; não executar
   `scripts/sync-partners.mjs` no fork (Princípio III, FR-010) (depende de T007)
 
@@ -104,17 +104,17 @@ acionar uma skill adaptada com frase em português natural.
 
 ### Documentação e metadados (User Story 1)
 
-- [ ] T011 [US1] Traduzir `README.md` para pt-BR, com nota de atribuição
+- [X] T011 [US1] Traduzir `README.md` para pt-BR, com nota de atribuição
   não-oficial, link e crédito ao repositório original, e licença MIT visível no
   topo (FR-002, FR-009) (depende de T007, T010)
-- [ ] T012 [P] [US1] Traduzir `CLAUDE.md` para pt-BR (FR-009) (depende de T007)
-- [ ] T013 [P] [US1] Traduzir `AGENTS.md` para pt-BR (FR-009) (depende de T007)
-- [ ] T014 [US1] Traduzir o conteúdo de autoria de skill herdado dentro do
+- [X] T012 [P] [US1] Traduzir `CLAUDE.md` para pt-BR (FR-009) (depende de T007)
+- [X] T013 [P] [US1] Traduzir `AGENTS.md` para pt-BR (FR-009) (depende de T007)
+- [X] T014 [US1] Traduzir o conteúdo de autoria de skill herdado dentro do
   `CONTRIBUTING.md` reconciliado para pt-BR (FR-009) (depende de T009)
-- [ ] T015 [US1] Atualizar `repository`, `homepage` e `author` em
+- [X] T015 [US1] Atualizar `repository`, `homepage` e `author` em
   `.claude-plugin/plugin.json` e `.claude-plugin/marketplace.json` para apontar ao
   fork em vez do repositório original (FR-008) (depende de T007)
-- [ ] T016 [US1] Revisar e testar a seção de instalação do `README.md` traduzido
+- [X] T016 [US1] Revisar e testar a seção de instalação do `README.md` traduzido
   (`npx skills add`, `/plugin marketplace add`) contra o fork real, confirmando que
   o marketplace reconhece os metadados atualizados (FR-008, FR-009, SC-002)
   (depende de T011, T015)
@@ -130,65 +130,65 @@ acionar uma skill adaptada com frase em português natural.
 > merge conforme FR-011 (fluxo de branch + PR já estabelecido no repositório); o
 > gate automático de frontmatter (T005/T006) já está ativo para cada uma destas PRs.
 
-- [ ] T017 [P] [US1] Adaptar `skills/cro/SKILL.md` ao pt-BR
-- [ ] T018 [P] [US1] Adaptar `skills/copywriting/SKILL.md` ao pt-BR
-- [ ] T019 [P] [US1] Adaptar `skills/seo-audit/SKILL.md` ao pt-BR
-- [ ] T020 [P] [US1] Adaptar `skills/emails/SKILL.md` ao pt-BR
-- [ ] T021 [P] [US1] Adaptar `skills/social/SKILL.md` ao pt-BR
-- [ ] T022 [P] [US1] Adaptar `skills/ads/SKILL.md` ao pt-BR
-- [ ] T023 [P] [US1] Adaptar `skills/analytics/SKILL.md` ao pt-BR
-- [ ] T024 [P] [US1] Adaptar `skills/pricing/SKILL.md` ao pt-BR
-- [ ] T025 [P] [US1] Adaptar `skills/launch/SKILL.md` ao pt-BR
-- [ ] T026 [P] [US1] Adaptar `skills/onboarding/SKILL.md` ao pt-BR
-- [ ] T027 [P] [US1] Adaptar `skills/signup/SKILL.md` ao pt-BR
-- [ ] T028 [P] [US1] Adaptar `skills/popups/SKILL.md` ao pt-BR
-- [ ] T029 [P] [US1] Adaptar `skills/copy-editing/SKILL.md` ao pt-BR
-- [ ] T030 [P] [US1] Adaptar `skills/content-strategy/SKILL.md` ao pt-BR
-- [ ] T031 [P] [US1] Adaptar `skills/customer-research/SKILL.md` ao pt-BR
+- [X] T017 [P] [US1] Adaptar `skills/cro/SKILL.md` ao pt-BR
+- [X] T018 [P] [US1] Adaptar `skills/copywriting/SKILL.md` ao pt-BR
+- [X] T019 [P] [US1] Adaptar `skills/seo-audit/SKILL.md` ao pt-BR
+- [X] T020 [P] [US1] Adaptar `skills/emails/SKILL.md` ao pt-BR
+- [X] T021 [P] [US1] Adaptar `skills/social/SKILL.md` ao pt-BR
+- [X] T022 [P] [US1] Adaptar `skills/ads/SKILL.md` ao pt-BR
+- [X] T023 [P] [US1] Adaptar `skills/analytics/SKILL.md` ao pt-BR
+- [X] T024 [P] [US1] Adaptar `skills/pricing/SKILL.md` ao pt-BR
+- [X] T025 [P] [US1] Adaptar `skills/launch/SKILL.md` ao pt-BR
+- [X] T026 [P] [US1] Adaptar `skills/onboarding/SKILL.md` ao pt-BR
+- [X] T027 [P] [US1] Adaptar `skills/signup/SKILL.md` ao pt-BR
+- [X] T028 [P] [US1] Adaptar `skills/popups/SKILL.md` ao pt-BR
+- [X] T029 [P] [US1] Adaptar `skills/copy-editing/SKILL.md` ao pt-BR
+- [X] T030 [P] [US1] Adaptar `skills/content-strategy/SKILL.md` ao pt-BR
+- [X] T031 [P] [US1] Adaptar `skills/customer-research/SKILL.md` ao pt-BR
 
 ### Adaptação das skills — lote restante (35, Fase 3 do PRD)
 
 > Mesmos critérios do lote core acima (FR-003–FR-006).
 
-- [ ] T032 [P] [US1] Adaptar `skills/ab-testing/SKILL.md` ao pt-BR
-- [ ] T033 [P] [US1] Adaptar `skills/ad-creative/SKILL.md` ao pt-BR
-- [ ] T034 [P] [US1] Adaptar `skills/ai-seo/SKILL.md` ao pt-BR
-- [ ] T035 [P] [US1] Adaptar `skills/aso/SKILL.md` ao pt-BR
-- [ ] T036 [P] [US1] Adaptar `skills/attribution/SKILL.md` ao pt-BR
-- [ ] T037 [P] [US1] Adaptar `skills/churn-prevention/SKILL.md` ao pt-BR
-- [ ] T038 [P] [US1] Adaptar `skills/co-marketing/SKILL.md` ao pt-BR
-- [ ] T039 [P] [US1] Adaptar `skills/cold-email/SKILL.md` ao pt-BR
-- [ ] T040 [P] [US1] Adaptar `skills/community-marketing/SKILL.md` ao pt-BR
-- [ ] T041 [P] [US1] Adaptar `skills/competitor-profiling/SKILL.md` ao pt-BR
-- [ ] T042 [P] [US1] Adaptar `skills/competitors/SKILL.md` ao pt-BR
-- [ ] T043 [P] [US1] Adaptar `skills/directory-submissions/SKILL.md` ao pt-BR
-- [ ] T044 [P] [US1] Adaptar `skills/events/SKILL.md` ao pt-BR
-- [ ] T045 [P] [US1] Adaptar `skills/free-tools/SKILL.md` ao pt-BR
-- [ ] T046 [P] [US1] Adaptar `skills/image/SKILL.md` ao pt-BR
-- [ ] T047 [P] [US1] Adaptar `skills/influencer-marketing/SKILL.md` ao pt-BR
-- [ ] T048 [P] [US1] Adaptar `skills/lead-magnets/SKILL.md` ao pt-BR
-- [ ] T049 [P] [US1] Adaptar `skills/marketing-council/SKILL.md` ao pt-BR
-- [ ] T050 [P] [US1] Adaptar `skills/marketing-ideas/SKILL.md` ao pt-BR
-- [ ] T051 [P] [US1] Adaptar `skills/marketing-loops/SKILL.md` ao pt-BR
-- [ ] T052 [P] [US1] Adaptar `skills/marketing-plan/SKILL.md` ao pt-BR
-- [ ] T053 [P] [US1] Adaptar `skills/marketing-psychology/SKILL.md` ao pt-BR
-- [ ] T054 [P] [US1] Adaptar `skills/offers/SKILL.md` ao pt-BR
-- [ ] T055 [P] [US1] Adaptar `skills/paywalls/SKILL.md` ao pt-BR
-- [ ] T056 [P] [US1] Adaptar `skills/product-marketing/SKILL.md` ao pt-BR
-- [ ] T057 [P] [US1] Adaptar `skills/programmatic-seo/SKILL.md` ao pt-BR
-- [ ] T058 [P] [US1] Adaptar `skills/prospecting/SKILL.md` ao pt-BR
-- [ ] T059 [P] [US1] Adaptar `skills/public-relations/SKILL.md` ao pt-BR
-- [ ] T060 [P] [US1] Adaptar `skills/referrals/SKILL.md` ao pt-BR
-- [ ] T061 [P] [US1] Adaptar `skills/revops/SKILL.md` ao pt-BR
-- [ ] T062 [P] [US1] Adaptar `skills/sales-enablement/SKILL.md` ao pt-BR
-- [ ] T063 [P] [US1] Adaptar `skills/schema/SKILL.md` ao pt-BR
-- [ ] T064 [P] [US1] Adaptar `skills/site-architecture/SKILL.md` ao pt-BR
-- [ ] T065 [P] [US1] Adaptar `skills/sms/SKILL.md` ao pt-BR
-- [ ] T066 [P] [US1] Adaptar `skills/video/SKILL.md` ao pt-BR
+- [X] T032 [P] [US1] Adaptar `skills/ab-testing/SKILL.md` ao pt-BR
+- [X] T033 [P] [US1] Adaptar `skills/ad-creative/SKILL.md` ao pt-BR
+- [X] T034 [P] [US1] Adaptar `skills/ai-seo/SKILL.md` ao pt-BR
+- [X] T035 [P] [US1] Adaptar `skills/aso/SKILL.md` ao pt-BR
+- [X] T036 [P] [US1] Adaptar `skills/attribution/SKILL.md` ao pt-BR
+- [X] T037 [P] [US1] Adaptar `skills/churn-prevention/SKILL.md` ao pt-BR
+- [X] T038 [P] [US1] Adaptar `skills/co-marketing/SKILL.md` ao pt-BR
+- [X] T039 [P] [US1] Adaptar `skills/cold-email/SKILL.md` ao pt-BR
+- [X] T040 [P] [US1] Adaptar `skills/community-marketing/SKILL.md` ao pt-BR
+- [X] T041 [P] [US1] Adaptar `skills/competitor-profiling/SKILL.md` ao pt-BR
+- [X] T042 [P] [US1] Adaptar `skills/competitors/SKILL.md` ao pt-BR
+- [X] T043 [P] [US1] Adaptar `skills/directory-submissions/SKILL.md` ao pt-BR
+- [X] T044 [P] [US1] Adaptar `skills/events/SKILL.md` ao pt-BR
+- [X] T045 [P] [US1] Adaptar `skills/free-tools/SKILL.md` ao pt-BR
+- [X] T046 [P] [US1] Adaptar `skills/image/SKILL.md` ao pt-BR
+- [X] T047 [P] [US1] Adaptar `skills/influencer-marketing/SKILL.md` ao pt-BR
+- [X] T048 [P] [US1] Adaptar `skills/lead-magnets/SKILL.md` ao pt-BR
+- [X] T049 [P] [US1] Adaptar `skills/marketing-council/SKILL.md` ao pt-BR
+- [X] T050 [P] [US1] Adaptar `skills/marketing-ideas/SKILL.md` ao pt-BR
+- [X] T051 [P] [US1] Adaptar `skills/marketing-loops/SKILL.md` ao pt-BR
+- [X] T052 [P] [US1] Adaptar `skills/marketing-plan/SKILL.md` ao pt-BR
+- [X] T053 [P] [US1] Adaptar `skills/marketing-psychology/SKILL.md` ao pt-BR
+- [X] T054 [P] [US1] Adaptar `skills/offers/SKILL.md` ao pt-BR
+- [X] T055 [P] [US1] Adaptar `skills/paywalls/SKILL.md` ao pt-BR
+- [X] T056 [P] [US1] Adaptar `skills/product-marketing/SKILL.md` ao pt-BR
+- [X] T057 [P] [US1] Adaptar `skills/programmatic-seo/SKILL.md` ao pt-BR
+- [X] T058 [P] [US1] Adaptar `skills/prospecting/SKILL.md` ao pt-BR
+- [X] T059 [P] [US1] Adaptar `skills/public-relations/SKILL.md` ao pt-BR
+- [X] T060 [P] [US1] Adaptar `skills/referrals/SKILL.md` ao pt-BR
+- [X] T061 [P] [US1] Adaptar `skills/revops/SKILL.md` ao pt-BR
+- [X] T062 [P] [US1] Adaptar `skills/sales-enablement/SKILL.md` ao pt-BR
+- [X] T063 [P] [US1] Adaptar `skills/schema/SKILL.md` ao pt-BR
+- [X] T064 [P] [US1] Adaptar `skills/site-architecture/SKILL.md` ao pt-BR
+- [X] T065 [P] [US1] Adaptar `skills/sms/SKILL.md` ao pt-BR
+- [X] T066 [P] [US1] Adaptar `skills/video/SKILL.md` ao pt-BR
 
 ### Validação (User Story 1)
 
-- [ ] T067 [US1] Validar User Story 1 via `quickstart.md` § User Story 1 —
+- [X] T067 [US1] Validar User Story 1 via `quickstart.md` § User Story 1 —
   instalação ponta a ponta em ambiente limpo (< 5 min, SC-002) e acionamento da
   skill `cro` com frase em pt-BR natural (depende de T011–T066)
 
@@ -208,24 +208,24 @@ termos já usados nas skills adaptadas.
 
 ### Implementação (User Story 2)
 
-- [ ] T068 [P] [US2] Implementar `scripts/sync-diff.mjs`: lê
+- [X] T068 [P] [US2] Implementar `scripts/sync-diff.mjs`: lê
   `.specify/sync-state.json` (`last_synced_sha`), roda `git fetch upstream`,
   compara `upstream/main` contra essa SHA restrito a `skills/**/SKILL.md`, imprime
   a lista de skills alteradas (adicionadas/modificadas/removidas) (FR-014,
   research.md § Script de sincronização) (depende de T008)
-- [ ] T069 [US2] Implementar a atualização de `.specify/sync-state.json`
+- [X] T069 [US2] Implementar a atualização de `.specify/sync-state.json`
   (`last_synced_sha`) após o mantenedor confirmar que tratou o diff (data-model.md
   § Registro de sincronização) (depende de T068)
-- [ ] T070 [P] [US2] Adicionar `node --test` cobrindo `sync-diff.mjs` com um
+- [X] T070 [P] [US2] Adicionar `node --test` cobrindo `sync-diff.mjs` com um
   repositório git de teste (fixture local) simulando skills alteradas (plan.md §
   Testing) (depende de T068)
-- [ ] T071 [US2] Popular `GLOSSARY.md` com os termos já usados nas skills
+- [X] T071 [US2] Popular `GLOSSARY.md` com os termos já usados nas skills
   adaptadas na User Story 1 (CRO, ICP, funil, ativação etc.) (FR-013, Acceptance
   Scenario 3) (depende de T004, T017–T066)
 
 ### Validação (User Story 2)
 
-- [ ] T072 [US2] Validar User Story 2 via `quickstart.md` § User Story 2
+- [X] T072 [US2] Validar User Story 2 via `quickstart.md` § User Story 2
   (`git remote -v`, `node scripts/sync-diff.mjs`, consulta ao `GLOSSARY.md`)
   (depende de T068–T071)
 
@@ -244,26 +244,30 @@ sem depender do site existir.
 
 ### Implementação (User Story 3)
 
-- [ ] T073 [US3] Preencher `scripts/categories.json` mapeando as 50 skills às 7
-  categorias traduzidas do diagrama do README upstream (SEO e Conteúdo, CRO,
-  Conteúdo e Copy, Pago e Mensuração, Crescimento e Retenção, Vendas e GTM,
-  Estratégia) (data-model.md § Mapeamento de categorias) (depende de T007 —
-  precisa apenas dos nomes das skills, não da adaptação pt-BR completa)
-- [ ] T074 [P] [US3] Implementar `scripts/generate-catalog.mjs`: lê
+- [X] T073 [US3] Preencher `scripts/categories.json` mapeando as 50 skills às 9
+  categorias reais da seção "## Skill Categories" do README upstream (Otimização
+  de Conversão, Conteúdo e Copy, SEO e Descoberta, Pago e Distribuição, Mensuração
+  e Testes, Retenção, Engenharia de Crescimento, Estratégia e Monetização, Vendas
+  e RevOps — corrigido de "7 categorias do diagrama ASCII" durante
+  `/speckit-implement`, ver research.md e data-model.md) (data-model.md §
+  Mapeamento de categorias) (depende de T007 — precisa apenas dos nomes das
+  skills, não da adaptação pt-BR completa)
+- [X] T074 [P] [US3] Implementar `scripts/generate-catalog.mjs`: lê
   `skills/*/SKILL.md`, extrai `name` e `description` do frontmatter, cruza com
   `scripts/categories.json`, escreve `catalog.json` na raiz do repositório
   validando contra `contracts/catalog-export.schema.json` (campos obrigatórios
-  `name`/`category` restrito ao enum de 7 valores/`description` com
-  `maxLength: 200`) (FR-015, research.md § Script de export) (depende de T007)
-- [ ] T075 [US3] Rodar `node scripts/generate-catalog.mjs` e commitar o
+  `name`/`category` restrito ao enum de 9 valores/`description` com
+  `maxLength: 200`, derivada mecanicamente da description completa) (FR-015,
+  research.md § Script de export) (depende de T007)
+- [X] T075 [US3] Rodar `node scripts/generate-catalog.mjs` e commitar o
   `catalog.json` gerado (FR-015) (depende de T073, T074)
-- [ ] T076 [P] [US3] Adicionar `node --test` cobrindo `generate-catalog.mjs`,
+- [X] T076 [P] [US3] Adicionar `node --test` cobrindo `generate-catalog.mjs`,
   validando a saída contra `contracts/catalog-export.schema.json` (plan.md §
   Testing) (depende de T074)
 
 ### Validação (User Story 3)
 
-- [ ] T077 [US3] Validar User Story 3 via `quickstart.md` § User Story 3 (gerar
+- [X] T077 [US3] Validar User Story 3 via `quickstart.md` § User Story 3 (gerar
   `catalog.json`, adicionar uma skill nova a `scripts/categories.json`, confirmar
   que reaparece no export sem edição manual) (depende de T073–T076)
 
@@ -275,19 +279,19 @@ sem depender do site existir.
 
 **Purpose**: Fechar os requisitos que atravessam todas as user stories
 
-- [ ] T078 [P] Confirmar que `validate-skills.sh` e `validate-skills-official.sh`
+- [X] T078 [P] Confirmar que `validate-skills.sh` e `validate-skills-official.sh`
   (herdados, uso local) continuam funcionando sem modificação contra o catálogo
   adaptado (depende de T007, T017–T066)
-- [ ] T079 Criar `.github/workflows/sync-catalog.yml`: roda
+- [X] T079 Criar `.github/workflows/sync-catalog.yml`: roda
   `node scripts/generate-catalog.mjs` a cada push tocando `skills/**/SKILL.md` ou
   `scripts/categories.json` e commita `catalog.json` automaticamente — mesmo
   padrão do `sync-skills.yml` do upstream (FR-015 — "atualizado a cada mudança no
   catálogo", research.md § Script de export) (depende de T074)
-- [ ] T080 Rodar `quickstart.md` de ponta a ponta (as 3 user stories em sequência)
+- [X] T080 Rodar `quickstart.md` de ponta a ponta (as 3 user stories em sequência)
   e, adicionalmente, `validate-skills.sh`/`validate-skills-official.sh` contra as
   50 skills adaptadas, confirmando 0 falhas (SC-003), como validação final antes
   do lançamento (depende de T067, T072, T077, T078)
-- [ ] T081 [P] Registrar a adaptação inicial em `VERSIONS.md` (mantém paridade com
+- [X] T081 [P] Registrar a adaptação inicial em `VERSIONS.md` (mantém paridade com
   a convenção de changelog já usada pelo upstream) (depende de T007)
 
 ---

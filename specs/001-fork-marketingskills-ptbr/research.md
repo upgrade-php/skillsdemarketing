@@ -52,19 +52,28 @@ não muda nenhum requisito da spec, só a forma como FR-012 deve ser implementad
 
 ## Decision: Origem da "categoria" de cada skill
 
-- **Decision**: a categoria de cada skill é extraída do diagrama de 7 categorias já
-  existente no README do upstream (SEO & Content, CRO, Content & Copy, Paid &
-  Measurement, Growth & Retention, Sales & GTM, Strategy), transcrito uma vez para
-  um mapeamento estruturado mantido no fork (`scripts/categories.json` ou
-  equivalente), com os nomes das categorias traduzidos para pt-BR.
+- **Decision**: a categoria de cada skill é extraída da seção "## Skill Categories"
+  do README do upstream (9 categorias: Conversion Optimization, Content & Copy,
+  SEO & Discovery, Paid & Distribution, Measurement & Testing, Retention, Growth
+  Engineering, Strategy & Monetization, Sales & RevOps), transcrita uma vez para um
+  mapeamento estruturado mantido no fork (`scripts/categories.json`), com os nomes
+  das categorias traduzidos para pt-BR. As 18 skills mais novas, não listadas nessa
+  seção do README (ela ficou desatualizada em relação ao catálogo atual de 50
+  skills), foram categorizadas por analogia ao tipo de tarefa, seguindo o mesmo
+  padrão das 32 já categorizadas pelo upstream.
 - **Rationale**: a spec já havia decidido (via `/speckit-clarify`) reaproveitar a
   categorização existente em vez de criar uma nova taxonomia. A inspeção real mostra
   que essa categorização **não é um campo de frontmatter** — `SKILL.md` só tem
-  `name`, `description` e `metadata.version`. As categorias existem apenas como um
-  diagrama ASCII manual no README, sem forma machine-readable. Não há como
-  "herdar" isso automaticamente; precisa ser transcrito uma vez para um arquivo
-  estruturado no fork, que passa a ser a fonte de verdade para o export (FR-015) e
-  para os metadados do catálogo.
+  `name`, `description` e `metadata.version`. O README tem duas representações de
+  categoria: um diagrama ASCII de dependências entre skills (7 blocos, pensado para
+  visualizar fluxo, não como taxonomia completa) e a seção "## Skill Categories"
+  (9 categorias, mais completa e explicitamente nomeada como categorização — usada
+  aqui). **Correção de design feita durante `/speckit-implement`**: a primeira
+  versão desta decisão citava os 7 blocos do diagrama; ao importar o conteúdo real
+  do upstream (T007), ficou claro que a seção "## Skill Categories" é a fonte
+  correta. Não há como "herdar" isso automaticamente de nenhuma das duas formas —
+  precisa ser transcrito uma vez para um arquivo estruturado no fork, que passa a
+  ser a fonte de verdade para o export (FR-015) e para os metadados do catálogo.
 - **Alternatives considered**: derivar categoria por palavras-chave da `description`
   — rejeitado por ser impreciso e não corresponder à categorização que o mantenedor
   original já validou; esperar por um campo de categoria estruturado no upstream —

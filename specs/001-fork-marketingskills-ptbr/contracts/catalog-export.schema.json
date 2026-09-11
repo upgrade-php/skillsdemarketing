@@ -17,15 +17,17 @@
       "category": {
         "type": "string",
         "enum": [
-          "SEO e Conteúdo",
-          "CRO",
+          "Otimização de Conversão",
           "Conteúdo e Copy",
-          "Pago e Mensuração",
-          "Crescimento e Retenção",
-          "Vendas e GTM",
-          "Estratégia"
+          "SEO e Descoberta",
+          "Pago e Distribuição",
+          "Mensuração e Testes",
+          "Retenção",
+          "Engenharia de Crescimento",
+          "Estratégia e Monetização",
+          "Vendas e RevOps"
         ],
-        "description": "Uma das 7 categorias traduzidas do mapeamento em scripts/categories.json (ver data-model.md)."
+        "description": "Uma das 9 categorias traduzidas do mapeamento em scripts/categories.json (ver data-model.md)."
       },
       "description": {
         "type": "string",

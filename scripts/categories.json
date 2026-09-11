@@ -1,0 +1,60 @@
+{
+  "cro": "Otimização de Conversão",
+  "signup": "Otimização de Conversão",
+  "onboarding": "Otimização de Conversão",
+  "popups": "Otimização de Conversão",
+  "paywalls": "Otimização de Conversão",
+
+  "copywriting": "Conteúdo e Copy",
+  "copy-editing": "Conteúdo e Copy",
+  "cold-email": "Conteúdo e Copy",
+  "emails": "Conteúdo e Copy",
+  "social": "Conteúdo e Copy",
+  "image": "Conteúdo e Copy",
+  "sms": "Conteúdo e Copy",
+  "video": "Conteúdo e Copy",
+  "content-strategy": "Conteúdo e Copy",
+
+  "seo-audit": "SEO e Descoberta",
+  "ai-seo": "SEO e Descoberta",
+  "programmatic-seo": "SEO e Descoberta",
+  "site-architecture": "SEO e Descoberta",
+  "competitors": "SEO e Descoberta",
+  "schema": "SEO e Descoberta",
+  "aso": "SEO e Descoberta",
+  "directory-submissions": "SEO e Descoberta",
+
+  "ads": "Pago e Distribuição",
+  "events": "Pago e Distribuição",
+  "ad-creative": "Pago e Distribuição",
+
+  "analytics": "Mensuração e Testes",
+  "ab-testing": "Mensuração e Testes",
+  "attribution": "Mensuração e Testes",
+
+  "churn-prevention": "Retenção",
+
+  "co-marketing": "Engenharia de Crescimento",
+  "free-tools": "Engenharia de Crescimento",
+  "referrals": "Engenharia de Crescimento",
+  "community-marketing": "Engenharia de Crescimento",
+  "influencer-marketing": "Engenharia de Crescimento",
+  "lead-magnets": "Engenharia de Crescimento",
+  "marketing-loops": "Engenharia de Crescimento",
+  "public-relations": "Engenharia de Crescimento",
+
+  "marketing-ideas": "Estratégia e Monetização",
+  "marketing-psychology": "Estratégia e Monetização",
+  "launch": "Estratégia e Monetização",
+  "pricing": "Estratégia e Monetização",
+  "marketing-council": "Estratégia e Monetização",
+  "marketing-plan": "Estratégia e Monetização",
+  "offers": "Estratégia e Monetização",
+  "product-marketing": "Estratégia e Monetização",
+  "customer-research": "Estratégia e Monetização",
+  "competitor-profiling": "Estratégia e Monetização",
+
+  "revops": "Vendas e RevOps",
+  "sales-enablement": "Vendas e RevOps",
+  "prospecting": "Vendas e RevOps"
+}
