@@ -1,0 +1,252 @@
+[
+  {
+    "name": "ab-testing",
+    "category": "Mensuração e Testes",
+    "description": "Quando o usuário quiser planejar, desenhar ou implementar um teste A/B ou experimento, ou construir um programa de experimentação de growth."
+  },
+  {
+    "name": "ad-creative",
+    "category": "Pago e Distribuição",
+    "description": "Quando o usuário quiser gerar, iterar ou escalar criativos de anúncio — títulos, descrições, texto principal, ou variações completas de anúncio — para qualquer plataforma de anúncio pago."
+  },
+  {
+    "name": "ads",
+    "category": "Pago e Distribuição",
+    "description": "Quando o usuário quiser ajuda com campanhas de anúncios pagos no Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X ou outras plataformas de anúncio."
+  },
+  {
+    "name": "ai-seo",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser otimizar conteúdo para mecanismos de busca por IA, ser citado por LLMs, ou aparecer em respostas geradas por IA."
+  },
+  {
+    "name": "analytics",
+    "category": "Mensuração e Testes",
+    "description": "Quando o usuário quiser configurar, melhorar ou auditar tracking e mensuração de analytics."
+  },
+  {
+    "name": "aso",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser auditar ou otimizar uma ficha na App Store ou Google Play."
+  },
+  {
+    "name": "attribution",
+    "category": "Mensuração e Testes",
+    "description": "Quando o usuário quiser descobrir qual marketing realmente gera conversões e receita, escolher ou interpretar um modelo de atribuição, ou reconciliar números conflitantes entre ferramentas."
+  },
+  {
+    "name": "churn-prevention",
+    "category": "Retenção",
+    "description": "Quando o usuário quiser reduzir churn, construir fluxos de cancelamento, configurar ofertas de retenção, recuperar pagamentos falhos, ou implementar estratégias de retenção."
+  },
+  {
+    "name": "co-marketing",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser encontrar parceiros de co-marketing, planejar campanhas conjuntas, ou fazer brainstorm de oportunidades de parceria."
+  },
+  {
+    "name": "cold-email",
+    "category": "Conteúdo e Copy",
+    "description": "Escreva e-mails frios B2B e sequências de follow-up que geram resposta."
+  },
+  {
+    "name": "community-marketing",
+    "category": "Engenharia de Crescimento",
+    "description": "Construa e alavanque comunidades online para gerar crescimento de produto e lealdade de marca."
+  },
+  {
+    "name": "competitor-profiling",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser pesquisar, perfilar, ou analisar concorrentes a partir de URLs deles."
+  },
+  {
+    "name": "competitors",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser criar páginas de comparação de concorrente ou alternativa para SEO e capacitação de vendas."
+  },
+  {
+    "name": "content-strategy",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser planejar uma estratégia de conteúdo, decidir que conteúdo criar, ou descobrir quais temas cobrir."
+  },
+  {
+    "name": "copy-editing",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser editar, revisar ou melhorar copy de marketing existente, ou atualizar conteúdo desatualizado."
+  },
+  {
+    "name": "copywriting",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser escrever, reescrever ou melhorar copy de marketing para qualquer página — incluindo home, landing pages, páginas de preço, páginas de feature, páginas sobre ou páginas de..."
+  },
+  {
+    "name": "cro",
+    "category": "Otimização de Conversão",
+    "description": "Quando o usuário quiser otimizar, melhorar ou aumentar conversões em qualquer página ou formulário de marketing — incluindo home, landing pages, páginas de preço, páginas de feature, formulários..."
+  },
+  {
+    "name": "customer-research",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser conduzir, analisar ou sintetizar pesquisa de cliente."
+  },
+  {
+    "name": "directory-submissions",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser submeter o produto a diretórios de startup, SaaS, IA, agente, MCP, no-code, ou avaliação para backlinks, domain rating, e descoberta."
+  },
+  {
+    "name": "emails",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser criar ou otimizar uma sequência de e-mail, campanha de drip, fluxo automatizado de e-mail ou programa de e-mail de lifecycle."
+  },
+  {
+    "name": "events",
+    "category": "Pago e Distribuição",
+    "description": "Quando o usuário quiser planejar, rodar, patrocinar, palestrar em, ou gerar pipeline a partir de eventos — webinars, conferências, feiras, meetups, jantares, workshops, summits virtuais, ou..."
+  },
+  {
+    "name": "free-tools",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser planejar, avaliar, ou construir uma ferramenta gratuita para fins de marketing — geração de lead, valor de SEO, ou reconhecimento de marca."
+  },
+  {
+    "name": "image",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser criar, gerar, editar, ou otimizar imagens para marketing — heroes de blog, gráficos sociais, mockups de produto, banners de perfil, visuais de listagem, ou assets de marca."
+  },
+  {
+    "name": "influencer-marketing",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser rodar parcerias de influenciador, criador, ou embaixador para promover o produto — encontrar e avaliar parceiros, estruturar acordos, fazer briefing de criador, compliance..."
+  },
+  {
+    "name": "launch",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser planejar o lançamento de um produto, anúncio de feature, ou estratégia de release."
+  },
+  {
+    "name": "lead-magnets",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser criar, planejar, ou otimizar uma isca digital para captura de e-mail ou geração de lead."
+  },
+  {
+    "name": "marketing-council",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser múltiplas perspectivas de especialista sobre uma pergunta de marketing — um conselho consultivo simulado, formado por marqueteiros lendários (Seth Godin, David Ogilvy,..."
+  },
+  {
+    "name": "marketing-ideas",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário precisar de ideias de marketing, inspiração, ou estratégias para seu produto SaaS ou software."
+  },
+  {
+    "name": "marketing-loops",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser configurar um fluxo de trabalho de marketing recorrente e autônomo — um loop repetível que um agente de IA roda em uma cadência (semanal, diária, por gatilho) em vez de uma..."
+  },
+  {
+    "name": "marketing-plan",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário precisar de um plano de marketing abrangente para um cliente, uma empresa que assessora, ou o próprio produto."
+  },
+  {
+    "name": "marketing-psychology",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser aplicar princípios psicológicos, modelos mentais, ou ciência comportamental ao marketing."
+  },
+  {
+    "name": "offers",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser desenhar, construir, ou melhorar uma oferta — a coisa que ele de fato vende — incluindo enquadramento de valor, empilhamento de bônus, garantia, escassez/urgência,..."
+  },
+  {
+    "name": "onboarding",
+    "category": "Otimização de Conversão",
+    "description": "Quando o usuário quiser otimizar o onboarding pós-cadastro, ativação de usuário, experiência de primeira execução, ou tempo até o valor (time-to-value)."
+  },
+  {
+    "name": "paywalls",
+    "category": "Otimização de Conversão",
+    "description": "Quando o usuário quiser criar ou otimizar paywalls dentro do app, telas de upgrade, modais de upsell, ou bloqueios de funcionalidade."
+  },
+  {
+    "name": "popups",
+    "category": "Otimização de Conversão",
+    "description": "Quando o usuário quiser criar ou otimizar popups, modais, overlays, slide-ins, ou banners para fins de conversão."
+  },
+  {
+    "name": "pricing",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser ajuda com decisões de preço, empacotamento (packaging) ou estratégia de monetização."
+  },
+  {
+    "name": "product-marketing",
+    "category": "Estratégia e Monetização",
+    "description": "Quando o usuário quiser criar ou atualizar seu documento de contexto de product marketing."
+  },
+  {
+    "name": "programmatic-seo",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser criar páginas orientadas a SEO em escala usando templates e dados."
+  },
+  {
+    "name": "prospecting",
+    "category": "Vendas e RevOps",
+    "description": "Quando o usuário quiser encontrar, qualificar, e construir uma lista de prospects para abordar — em B2B SaaS, B2B geral, ou pequenos negócios locais."
+  },
+  {
+    "name": "public-relations",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser ajuda com relações públicas, mídia espontânea, cobertura de imprensa, abordagem de jornalista, ou estratégia de mídia (não pull requests)."
+  },
+  {
+    "name": "referrals",
+    "category": "Engenharia de Crescimento",
+    "description": "Quando o usuário quiser criar, otimizar, ou analisar um programa de indicação, programa de afiliados, ou estratégia de boca a boca."
+  },
+  {
+    "name": "revops",
+    "category": "Vendas e RevOps",
+    "description": "Quando o usuário quiser ajuda com operações de receita, gestão de ciclo de vida de lead, ou processos de handoff de marketing para vendas."
+  },
+  {
+    "name": "sales-enablement",
+    "category": "Vendas e RevOps",
+    "description": "Quando o usuário quiser criar material de vendas, decks de pitch, one-pagers, documentos de tratamento de objeção, ou roteiros de demo."
+  },
+  {
+    "name": "schema",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser adicionar, corrigir, ou otimizar schema markup e dado estruturado no site dele."
+  },
+  {
+    "name": "seo-audit",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser auditar, revisar ou diagnosticar problemas de SEO no site."
+  },
+  {
+    "name": "signup",
+    "category": "Otimização de Conversão",
+    "description": "Quando o usuário quiser otimizar cadastro, registro, criação de conta, ou fluxos de ativação de teste grátis."
+  },
+  {
+    "name": "site-architecture",
+    "category": "SEO e Descoberta",
+    "description": "Quando o usuário quiser planejar, mapear, ou reestruturar a hierarquia de páginas, navegação, estrutura de URL, ou link interno do site."
+  },
+  {
+    "name": "sms",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser planejar, construir, ou otimizar marketing por SMS ou MMS — incluindo fluxos de boas-vindas, textos de carrinho abandonado, pós-compra, win-back, envios promocionais, ou..."
+  },
+  {
+    "name": "social",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser criar, agendar ou otimizar conteúdo de redes sociais para LinkedIn, Twitter/X, Instagram, TikTok, Facebook ou outras plataformas, ou fazer social listening e triagem de..."
+  },
+  {
+    "name": "video",
+    "category": "Conteúdo e Copy",
+    "description": "Quando o usuário quiser criar, gerar, ou produzir conteúdo de vídeo usando ferramentas de IA ou frameworks programáticos."
+  }
+]
