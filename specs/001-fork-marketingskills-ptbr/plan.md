@@ -111,7 +111,8 @@ scripts/
 └── plugin.json                 # Herdado/adaptado do upstream (FR-008)
 
 .specify/
-└── sync-state.json             # NOVO — estado local (não versionado) do último sync (data-model.md)
+└── sync-state.json             # NOVO — estado versionado (compartilhado pelo time) do último sync
+                                  # (corrigido durante /speckit-implement — ver data-model.md)
 
 GLOSSARY.md                      # NOVO — FR-013
 README.md / CLAUDE.md / AGENTS.md / CONTRIBUTING.md   # Traduzidos (FR-009), já existentes no fork
