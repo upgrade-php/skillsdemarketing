@@ -83,12 +83,17 @@ arquivos: `pre-commit run --all-files`.
 
 ## Adaptando ou adicionando uma skill
 
-Este fork parte do catálogo original em inglês
-([coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)).
-A maior parte do trabalho aqui é **adaptar** uma skill já existente ao pt-BR — não
-criar uma do zero. Para adicionar uma skill nova (que ainda não existe no
-original), sugira primeiro [abrindo uma issue](https://github.com/coreyhaines31/marketingskills/issues/new?template=skill-request.yml)
-no repositório original, para manter os dois catálogos alinhados.
+Este repositório partiu do catálogo original em inglês
+([coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills))
+— o fork foi a iniciativa inicial. A primeira versão foi **adaptar** as skills
+existentes ao pt-BR, mas isso não impede adicionar skills novas, desde que não
+dupliquem uma já presente no catálogo.
+
+Também é nossa responsabilidade evoluir as skills existentes a partir da nossa
+visão e proposta de valor, sem nos prender ao fork original.
+
+Para sugerir uma skill nova, [abra uma issue](https://github.com/upgrade-php/skillsdemarketing/issues/new)
+neste repositório.
 
 ### Adaptando uma skill existente
 

@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - "**/SKILL.md"
+      - ".github/workflows/validate-skill.yml"
   pull_request:
     branches: [main]
-    paths:
-      - "**/SKILL.md"
+    # Sem filtro de paths: a ruleset exige o check "Skill frontmatter
+    # validation". Se o workflow for pulado, o GitHub fica em
+    # "Expected — Waiting for status to be reported" e o PR não fecha.
 
 concurrency:
   group: validate-skill-${{ github.ref }}
@@ -37,11 +39,16 @@ jobs:
             HEAD=${{ github.event.after }}
           fi
 
-          SKILLS=$(git diff --name-only $BASE $HEAD | \
-            grep 'SKILL.md$' | \
-            xargs -I {} dirname {} | \
-            sort -u | \
-            jq -R -s -c 'split("\n") | map(select(length > 0))')
+          SKILL_FILES=$(git diff --name-only "$BASE" "$HEAD" | grep 'SKILL.md$' || true)
+
+          if [ -z "$SKILL_FILES" ]; then
+            SKILLS='[]'
+          else
+            SKILLS=$(printf '%s\n' "$SKILL_FILES" | \
+              xargs -I {} dirname {} | \
+              sort -u | \
+              jq -R -s -c 'split("\n") | map(select(length > 0))')
+          fi
 
           echo "skills=$SKILLS" >> $GITHUB_OUTPUT
           echo "Changed skills: $SKILLS"
@@ -80,4 +87,5 @@ jobs:
             echo "Skill frontmatter validation failed (result: $result)"
             exit 1
           fi
+          # success = skills validadas; skipped = nenhum SKILL.md neste PR
           echo "OK (result: $result)"
