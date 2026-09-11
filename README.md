@@ -226,6 +226,24 @@ para reportar? PRs e issues são bem-vindos!
 Veja [CONTRIBUTING.md](CONTRIBUTING.md) para as diretrizes de contribuição —
 tanto do fluxo de repositório quanto de como adaptar ou revisar uma skill.
 
+## Sobre o mantenedor
+
+Este projeto é mantido por Vicente Pinheiro, estrategista digital com
+experiência em engenharia de software, aquisição de clientes e comunicação
+persuasiva.
+
+Depois de mais de 15 anos trabalhando com tecnologia e de ter construído e
+liderado uma startup de geração de leads, Vicente hoje explora como agentes de
+IA podem ampliar a capacidade de empreendedores executarem marketing com mais
+método, qualidade e autonomia.
+
+O Skills de Marketing nasce dessa interseção entre tecnologia, estratégia e
+marketing: tornar conhecimento especializado mais acessível dentro dos agentes
+de IA que já fazem parte do trabalho diário.
+
+Saiba mais em
+[vicentepinheiro.com](https://vicentepinheiro.com/?utm_source=github&utm_medium=readme&utm_campaign=skillsdemarketing).
+
 ## Licença
 
 [MIT](LICENSE) — use como quiser, como no projeto original.
