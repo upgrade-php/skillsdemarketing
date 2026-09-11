@@ -26,7 +26,6 @@ Se o seu banco pedir só a chave aleatória:
 3a5edbaf-6298-4c47-bce2-ff4d1fa946ae
 ```
 
-- **Recebedor:** Vicente de Paulo Pinheiro
-- **Cidade:** Fortaleza - CE
+**Recebedor:** Vicente de Paulo Pinheiro
 
 Obrigado por apoiar o projeto.
