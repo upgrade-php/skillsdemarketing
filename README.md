@@ -12,11 +12,6 @@ código com IA ajudem em otimização de conversão, copywriting, SEO, analytics
 growth engineering. Funciona com Claude Code, OpenAI Codex, Cursor, Windsurf e
 qualquer agente compatível com a [especificação Agent Skills](https://agentskills.io).
 
-Precisa de ajuda prática com o catálogo original em inglês? Veja os links do
-projeto original: [Conversion Factory](https://conversionfactory.co?ref=marketingskills)
-(agência do Corey Haines), [Swipe Files](https://swipefiles.com?ref=marketingskills)
-e [Coding for Marketers](https://codingformarketers.com?ref=marketingskills).
-
 **Contribuições são bem-vindas!** Encontrou uma forma de melhorar uma skill
 adaptada ou uma inconsistência de tradução? [Abra um PR](CONTRIBUTING.md).
 
