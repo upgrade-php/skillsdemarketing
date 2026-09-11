@@ -1,0 +1,16 @@
+# Dev-only paths excluded from git archive / GitHub Release source zips.
+# They remain in the repository for contributors.
+
+.specify/ export-ignore
+specs/ export-ignore
+
+.claude/skills/speckit-analyze/ export-ignore
+.claude/skills/speckit-checklist/ export-ignore
+.claude/skills/speckit-clarify/ export-ignore
+.claude/skills/speckit-constitution/ export-ignore
+.claude/skills/speckit-converge/ export-ignore
+.claude/skills/speckit-implement/ export-ignore
+.claude/skills/speckit-plan/ export-ignore
+.claude/skills/speckit-specify/ export-ignore
+.claude/skills/speckit-tasks/ export-ignore
+.claude/skills/speckit-taskstoissues/ export-ignore
