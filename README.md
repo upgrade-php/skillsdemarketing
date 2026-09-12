@@ -18,6 +18,12 @@ Quer apoiar o mantenedor? [Contribua via Pix](PIX.md).
 
 Encontrou um problema ou tem uma dúvida? [Abra uma issue](https://github.com/upgrade-php/skillsdemarketing/issues).
 
+## Compartilhe
+
+Se alguma skill te ajudou, marca com **#SkillsMktBr** nas redes. A gente lê,
+responde, e usa os melhores casos como exemplo pra quem ainda está decidindo
+instalar.
+
 ## O que são Skills?
 
 Skills são arquivos Markdown que dão a agentes de IA conhecimento especializado

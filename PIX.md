@@ -7,9 +7,7 @@ valor via Pix. A doação vai para **Vicente Pinheiro**, mantenedor deste fork.
 
 Abra o app do seu banco, escolha **Pix > Ler QR Code** e aponte a câmera:
 
-<p align="center">
-  <img src="assets/pix-qrcode.png" alt="QR Code Pix para doação a Vicente Pinheiro" width="280" />
-</p>
+![QR Code Pix para doação a Vicente Pinheiro](assets/pix-qrcode.png)
 
 ## Copiar a chave Pix
 
@@ -26,6 +24,6 @@ Se o seu banco pedir só a chave aleatória:
 3a5edbaf-6298-4c47-bce2-ff4d1fa946ae
 ```
 
-**Recebedor:** Vicente de Paulo Pinheiro
+**Recebedor:** Vicente de Paulo Pinheiro Filho
 
 Obrigado por apoiar o projeto.
