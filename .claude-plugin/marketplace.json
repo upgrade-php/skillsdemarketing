@@ -2,7 +2,7 @@
   "name": "skillsdemarketing",
   "owner": {
     "name": "upgrade-php (fork pt-BR; catálogo original por Corey Haines)",
-    "url": "https://github.com/upgrade-php/skillsdemarketing"
+    "url": "https://skillsdemarketing.com.br"
   },
   "metadata": {
     "description": "Skills de marketing para agentes de IA em pt-BR — otimização de conversão, copywriting, SEO, anúncios pagos e growth. Fork não-oficial de coreyhaines31/marketingskills.",
@@ -13,7 +13,9 @@
     {
       "name": "marketing-skills-ptbr",
       "description": "50 skills de marketing em pt-BR para profissionais técnicos de marketing e founders: CRO, copywriting, cold email, prospecção, SEO, AI SEO, anúncios pagos, SMS, criativos de anúncio, produção de vídeo, geração de imagem, co-marketing, prevenção de churn, precificação, indicações, revenue operations, sales enablement, pesquisa de clientes, arquitetura de site, planos de marketing estruturados em AARRR, relações públicas e mídia espontânea, desenho de oferta, marketing de eventos e webinars, e mais.",
-      "source": "./"
+      "source": "./",
+      "homepage": "https://skillsdemarketing.com.br",
+      "repository": "https://github.com/upgrade-php/skillsdemarketing"
     }
   ]
 }
